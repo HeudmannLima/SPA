@@ -343,7 +343,8 @@ li:first-child .form-header-group,
 /* omer */
 
 .backg {
-  background-image: url("bgk.jpg");
+  background-image: url('bgk.jpg');
+  background-color: lightblue;
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
