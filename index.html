@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="backg">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>CRUD Test - Heudmann Lima</title>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="./js/spatest.js"></script>
+  <script src="./js/script.js"></script>
+  <link type="text/css" rel="stylesheet" href="./css/m1.css">
+
+  <style type="text/css">
+    table, th, td {
+      border: 1px solid black;
+      align-content: center;
+    }
+
+    .form-label-left {
+      width: auto;
+    }
+
+    .form-label-right {
+      width: auto;
+    }
+
+    .form-line {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    body,
+    html {
+      margin: 300;
+      padding: 0;
+      background: rgba(248, 248, 248, 0.61);
+    }
+
+    ul {
+        list-style-type:none
+    }
+
+    .form-all {
+      margin: auto auto;
+      padding-top: 0px;
+      width: 550px;
+      color: rgb(1, 49, 124) !important;
+      font-family: 'Exo 2';
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--Menu Principal -->
+  <form class="jotform-form">
+    <div class="form-all">
+      <ul>
+        <li>
+          <div class="form-header-group" align="center">
+                <center>
+                  <strong>C</strong>onsulte, <strong>A</strong>dicione,
+                  <strong>A</strong>tualize ou <strong>D</strong>elete Autores da Lista.<br><br>
+                  <div id="hcon"><button id="btcon" type="submit" class="form-submit-button"> Consultar</button></div>
+                  <div id="hadd"><button id="btadd" type="submit" class="form-submit-button"> Adicionar</button></div>
+                  <div id="hupd"><button id="btupd" type="submit" class="form-submit-button"> Atualizar</button></div>
+                  <div id="hdel"><button id="btdel" type="submit" class="form-submit-button" > Remover</button></div>
+                </center>
+          </div>
+        </li>
+
+
+        <!--Consultar-->
+        <div class="ccon">
+          <h1 align="center">Consulta de Autores</h1><br>
+          <div id="oop">
+            <table style="width:50%" align="center">
+              <thead>
+                <td><strong>Nome</strong></td>
+                <td><strong>Sobrenome</strong></td>
+                <td><strong>Cód.</strong></td>
+              </thead>
+              <tbody id="autores"></tbody>
+            </table><p class="pp" align="center"></p>
+          </div>
+        </div>
+
+
+        <!--Adicionar-->
+        <div class="aadd">
+          <h1 align="center">Adicionar Autores</h1>
+          <li class="form-line" data-type="control_fullname">
+            <h4>Inserir Nome Completo:</h4>
+            <div>
+                <input type="text" id="fname" class="form-textbox" size="10" value="">
+                <label style="min-height:13px;"><strong>P</strong>rimeiro Nome</label>
+                <input type="text" id="lname" class="form-textbox" size="10" value="">
+                <label style="min-height:13px;"><strong>S</strong>obrenome </label>
+                <div id="hcon">
+                  <br><button id="adicionar" type="submit">Adicionar</button>
+                </div>
+            </div>
+          </li>
+        </div>
+
+
+        <!--Deletar-->
+        <div class="ddel">
+          <h1 align="center">Remover Autores</h1><br>
+          <li class="form-line">
+            <label class="form-label form-label-left form-label-auto">
+              Selecione Autor:
+            </label>
+            <select size="5" id="listadel"></select><br>
+            <div id="hdel">
+              <center><button id="btdel1" type="submit">Deletar</button></center>
+            </div>
+          </li>
+        </div>
+
+
+        <!--Alterar-->
+        <div class="uupd">
+          <h1 align="center">Atualizar Cadastro</h1><br>
+            <li class="form-line">
+              <label class="form-label form-label-left form-label-auto">
+                Selecione Autor:
+              </label>
+              <select size="5" id="listaatt"></select>
+            </li>
+              <li class="form-line">
+                <label class="form-label form-label-left form-label-auto">
+                  Alterar Nome:
+                </label>
+                <input type="text" id="alteraNome" class="form-textbox" size="10" value="">
+                <label class="form-sub-label" style="min-height:13px;">
+                <strong>P</strong>rimeiro Nome</label><br><br>
+                <label class="form-label form-label-left form-label-auto">&nbsp;</label>
+                <input type="text" id="alteraSobre" class="form-textbox" size="10" value="">
+                <label class="form-sub-label" style="min-height:13px;">
+                <strong>S</strong>obrenome </label><br><br>
+                <div>
+                  <label class="form-label form-label-left form-label-auto">&nbsp;</label>
+                  <button id="alterara" type="submit" align="center">Alterar</button>
+                </div>
+              </li>
+              <textarea hidden id="input_17"  name="q17_message" cols="0" rows="0" data-component="textarea" required=""></textarea>
+          </div>
+
+      </ul>
+    </div>
+  </form>
+</body>
+</html>
